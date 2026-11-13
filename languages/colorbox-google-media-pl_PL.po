@@ -1,0 +1,511 @@
+# Copyright (C) 2026 Piotr Szmidt / Colorbox Studio
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Colorbox Google Media — Drive videos & Google Photos 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/colorbox-google-media\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-13T18:20:18+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: colorbox-google-media\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#. Plugin Name of the plugin
+#: colorbox-google-media.php
+msgid "Colorbox Google Media — Drive videos & Google Photos"
+msgstr "Colorbox Google Media — filmy z Dysku i Zdjęcia Google"
+
+#. Plugin URI of the plugin
+#: colorbox-google-media.php
+msgid "https://github.com/szmidtpiotr/colorbox-google-media"
+msgstr "https://github.com/szmidtpiotr/colorbox-google-media"
+
+#. Description of the plugin
+#: colorbox-google-media.php
+msgid "Upload videos from the block editor straight to your Google Drive and embed them with a cover frame (the Drive player loads only on click). Import photos from Google Photos into the media library as a gallery. Paste any Drive video link to embed it. Configure under Settings → Google Media."
+msgstr "Wysyłaj filmy z edytora bloków prosto na swój Dysk Google i osadzaj je z okładką (odtwarzacz Dysku ładuje się dopiero po kliknięciu). Importuj zdjęcia ze Zdjęć Google do biblioteki mediów jako galerię. Każdy link do filmu z Dysku wklejony we wpis staje się odtwarzaczem. Konfiguracja: Ustawienia → Media Google."
+
+#. Author of the plugin
+#: colorbox-google-media.php
+msgid "Piotr Szmidt / Colorbox Studio"
+msgstr "Piotr Szmidt / Colorbox Studio"
+
+#: colorbox-google-media.php:28
+msgid "Colorbox Google Media is inactive: the older must-use version (colorbox-drive-wideo) is still installed. Remove it from wp-content/mu-plugins first."
+msgstr "Colorbox Google Media jest nieaktywna: nadal jest zainstalowana starsza wersja „zawsze włączona” (colorbox-drive-wideo). Najpierw usuń ją z wp-content/mu-plugins."
+
+#: colorbox-google-media.php:50
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: includes/drive.php:67
+msgid "The Google connection has no Drive access. Reconnect under Settings → Google Media."
+msgstr "Połączenie z Google nie ma dostępu do Dysku. Połącz ponownie w Ustawienia → Media Google."
+
+#: includes/embed.php:61
+msgid "Video from Google Drive"
+msgstr "Film z Dysku Google"
+
+#: includes/embed.php:86
+msgid "Play video"
+msgstr "Odtwórz film"
+
+#: includes/google.php:106
+msgid "Google is not connected (Settings → Google Media)."
+msgstr "Google nie jest połączony (Ustawienia → Media Google)."
+
+#. translators: %s: error message
+#: includes/google.php:123
+#, php-format
+msgid "Cannot reach Google: %s"
+msgstr "Brak połączenia z Google: %s"
+
+#. translators: %s: Google error code
+#: includes/google.php:134
+#, php-format
+msgid "Google did not issue a token (%s). Reconnect under Settings → Google Media."
+msgstr "Google nie wydał tokenu (%s). Połącz ponownie w Ustawienia → Media Google."
+
+#. translators: %s: error message from Google
+#: includes/google.php:174
+#: assets/js/drive-video.js:83
+#, php-format,js-format
+msgid "Google: %s"
+msgstr "Google: %s"
+
+#. translators: %s: site domain
+#: includes/google.php:182
+#, php-format
+msgid "%s — videos"
+msgstr "%s — filmy"
+
+#: includes/photos.php:74
+msgid "The Google connection has no Google Photos access. Enable “Photos Picker API” in Google Cloud, then click “Reconnect” under Settings → Google Media."
+msgstr "Połączenie z Google nie ma dostępu do Zdjęć Google. Włącz „Photos Picker API” w Google Cloud, potem kliknij „Połącz ponownie” w Ustawienia → Media Google."
+
+#: includes/photos.php:92
+msgid "Unknown or expired picking session."
+msgstr "Nieznana albo wygasła sesja wyboru."
+
+#: includes/photos.php:142
+msgid "The picking session has expired (photo links work for 60 minutes). Pick the photos again."
+msgstr "Sesja wyboru wygasła (adresy zdjęć działają 60 minut). Wybierz zdjęcia jeszcze raz."
+
+#: includes/photos.php:152
+msgid "This photo is not part of the picking session."
+msgstr "Tego zdjęcia nie ma w sesji wyboru."
+
+#: includes/photos.php:158
+msgid "Google gave no address for this photo."
+msgstr "Google nie podał adresu tego zdjęcia."
+
+#. translators: 1: file name, 2: error
+#: includes/photos.php:183
+#, php-format
+msgid "Could not download “%1$s” from Google Photos: %2$s"
+msgstr "Nie udało się pobrać „%1$s” ze Zdjęć Google: %2$s"
+
+#. translators: %s: file name
+#: includes/photos.php:198
+#, php-format
+msgid "Could not remove metadata (location) from “%s”, so it was not imported."
+msgstr "Nie udało się usunąć metadanych (lokalizacji) z „%s”, więc zdjęcie nie zostało zaimportowane."
+
+#. translators: 1: file name, 2: error
+#: includes/photos.php:214
+#, php-format
+msgid "WordPress did not accept “%1$s”: %2$s"
+msgstr "WordPress nie przyjął „%1$s”: %2$s"
+
+#: includes/settings.php:16
+msgid "Google Media"
+msgstr "Media Google"
+
+#: includes/settings.php:41
+#: includes/settings.php:64
+#: includes/settings.php:92
+msgid "Not allowed."
+msgstr "Brak uprawnień."
+
+#: includes/settings.php:171
+msgid "Saved."
+msgstr "Zapisano."
+
+#: includes/settings.php:172
+msgid "Connected to Google."
+msgstr "Połączono z Google."
+
+#: includes/settings.php:173
+msgid "Disconnected. Access has been revoked in your Google account."
+msgstr "Rozłączono. Dostęp w koncie Google został cofnięty."
+
+#: includes/settings.php:174
+msgid "Enter the client ID and secret first, then connect."
+msgstr "Najpierw wpisz identyfikator i tajny klucz klienta, potem połącz."
+
+#: includes/settings.php:175
+msgid "Returned from Google without a valid session (more than 15 minutes passed or the link was opened twice). Click “Connect” again."
+msgstr "Powrót z Google bez ważnej sesji (minęło ponad 15 minut albo link otwarto dwa razy). Kliknij „Połącz” jeszcze raz."
+
+#. translators: %s: error detail from Google
+#: includes/settings.php:177
+#, php-format
+msgid "Google refused: %s"
+msgstr "Google odmówił: %s"
+
+#: includes/settings.php:178
+msgid "Google returned no refresh token. Remove the app at myaccount.google.com/permissions and connect again."
+msgstr "Google nie oddał klucza odświeżania. Usuń dostęp aplikacji na myaccount.google.com/permissions i połącz jeszcze raz."
+
+#: includes/settings.php:182
+msgid "Google Media — Drive videos and Google Photos"
+msgstr "Media Google — filmy z Dysku i Zdjęcia Google"
+
+#: includes/settings.php:187
+msgid "1. OAuth client from Google Cloud"
+msgstr "1. Klient OAuth z Google Cloud"
+
+#: includes/settings.php:188
+msgid "In Google Cloud create an OAuth client of type <strong>Web application</strong> and paste this exact address under “Authorized redirect URIs”:"
+msgstr "W Google Cloud utwórz klienta OAuth typu <strong>Aplikacja internetowa</strong> i w polu „Autoryzowane identyfikatory URI przekierowania” wklej dokładnie ten adres:"
+
+#: includes/settings.php:190
+msgid "https://github.com/szmidtpiotr/colorbox-google-media/blob/HEAD/docs/en/google-cloud-setup.md"
+msgstr "https://github.com/szmidtpiotr/colorbox-google-media/blob/HEAD/docs/pl/konfiguracja-google-cloud.md"
+
+#: includes/settings.php:190
+msgid "Step-by-step Google Cloud setup"
+msgstr "Konfiguracja Google Cloud krok po kroku"
+
+#: includes/settings.php:194
+msgid "Client ID"
+msgstr "Identyfikator klienta"
+
+#: includes/settings.php:196
+msgid "Client secret"
+msgstr "Tajny klucz klienta"
+
+#: includes/settings.php:199
+msgid "saved — leave empty to keep"
+msgstr "zapisany — zostaw puste, żeby nie zmieniać"
+
+#: includes/settings.php:202
+msgid "Save"
+msgstr "Zapisz"
+
+#: includes/settings.php:205
+msgid "2. Connect your Google account"
+msgstr "2. Połącz konto Google"
+
+#. translators: %s: Google account e-mail
+#: includes/settings.php:209
+#, php-format
+msgid "Connected to <strong>%s</strong>."
+msgstr "Połączono z kontem <strong>%s</strong>."
+
+#: includes/settings.php:211
+msgid "Connected."
+msgstr "Połączono."
+
+#: includes/settings.php:214
+msgid "Google Drive: access granted."
+msgstr "Dysk Google: dostęp jest."
+
+#: includes/settings.php:214
+msgid "Google Drive: no access — reconnect and tick the Drive checkbox."
+msgstr "Dysk Google: brak dostępu — połącz ponownie i zaznacz pole Dysku."
+
+#: includes/settings.php:215
+msgid "Google Photos: access granted."
+msgstr "Zdjęcia Google: dostęp jest."
+
+#: includes/settings.php:215
+msgid "Google Photos: no access — enable “Photos Picker API” in Google Cloud, then reconnect and tick the Photos checkbox."
+msgstr "Zdjęcia Google: brak dostępu — włącz „Photos Picker API” w Google Cloud, potem połącz ponownie i zaznacz pole Zdjęć."
+
+#: includes/settings.php:220
+msgid "Reconnect"
+msgstr "Połącz ponownie"
+
+#: includes/settings.php:224
+msgid "Disconnect"
+msgstr "Rozłącz"
+
+#: includes/settings.php:227
+msgid "Not connected."
+msgstr "Nie połączono."
+
+#: includes/settings.php:231
+msgid "Connect with Google"
+msgstr "Połącz z Google"
+
+#: includes/settings.php:235
+msgid "3. Use it"
+msgstr "3. Użycie"
+
+#. translators: %s: Drive folder name
+#: includes/settings.php:237
+#, php-format
+msgid "Block <strong>Drive video</strong>: upload a new video or pick one uploaded before. Videos go to the folder <strong>%s</strong> in your Drive (you may move or rename it)."
+msgstr "Blok <strong>Film z Dysku</strong>: wyślij nowy film albo wybierz wysłany wcześniej. Filmy trafiają do folderu <strong>%s</strong> na Twoim Dysku (możesz go przenieść i przemianować)."
+
+#: includes/settings.php:238
+msgid "Block <strong>Google Photos</strong>: pick photos in Google’s window; they are copied into the media library and inserted as a gallery."
+msgstr "Blok <strong>Zdjęcia Google</strong>: wybierz zdjęcia w oknie Google; trafią jako kopie do biblioteki mediów i wstawią się jako galeria."
+
+#: includes/settings.php:239
+msgid "A Google Drive link pasted on its own line also becomes a player (the file must be shared as “Anyone with the link”)."
+msgstr "Link do pliku na Dysku Google wklejony w osobnej linii też staje się odtwarzaczem (plik musi mieć dostęp „Każdy, kto ma link”)."
+
+#: assets/js/drive-video.js:32
+#, js-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#: assets/js/drive-video.js:87
+msgid "The connection to Google was interrupted."
+msgstr "Przerwane połączenie z Google."
+
+#: assets/js/drive-video.js:90
+#: assets/js/google-photos.js:78
+#: assets/js/google-photos.js:99
+msgid "Cancelled."
+msgstr "Anulowano."
+
+#: assets/js/drive-video.js:101
+#, js-format
+msgid "%1$s: %2$d%% (%3$s of %4$s). Keep this tab open."
+msgstr "%1$s: %2$d%% (%3$s z %4$s). Nie zamykaj karty."
+
+#: assets/js/drive-video.js:107
+#: assets/js/google-photos.js:185
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: assets/js/drive-video.js:141
+#, js-format
+msgid "This is not a video file (%s)."
+msgstr "To nie jest plik wideo (%s)."
+
+#: assets/js/drive-video.js:169
+#, js-format
+msgid "Video cover: %s"
+msgstr "Okładka filmu: %s"
+
+#: assets/js/drive-video.js:252
+msgid "Google returned no upload session address."
+msgstr "Google nie oddał adresu sesji wysyłania."
+
+#: assets/js/drive-video.js:313
+msgid "Only administrators can upload to Google Drive. Paste a Drive link on its own line instead — it becomes a player too."
+msgstr "Wysyłać na Dysk Google może tylko administrator. Wklej link z Dysku w osobnej linii — też zadziała jak odtwarzacz."
+
+#: assets/js/drive-video.js:318
+msgid "Google Drive is not connected yet."
+msgstr "Dysk Google nie jest jeszcze połączony."
+
+#: assets/js/drive-video.js:319
+msgid "Open Settings → Google Media"
+msgstr "Otwórz Ustawienia → Media Google"
+
+#: assets/js/drive-video.js:325
+msgid "Scrub the video to the frame you want as the cover."
+msgstr "Przewiń film do klatki, która ma być okładką."
+
+#: assets/js/drive-video.js:346
+msgid "Insert — this frame is the cover"
+msgstr "Wstaw — ta klatka to okładka"
+
+#: assets/js/drive-video.js:346
+msgid "Upload — this frame is the cover"
+msgstr "Wyślij — ta klatka to okładka"
+
+#: assets/js/drive-video.js:356
+msgid "Insert without a cover"
+msgstr "Wstaw bez okładki"
+
+#: assets/js/drive-video.js:356
+msgid "Upload without a cover"
+msgstr "Wyślij bez okładki"
+
+#: assets/js/drive-video.js:367
+#: assets/js/drive-video.js:452
+msgid "Back"
+msgstr "Wróć"
+
+#: assets/js/drive-video.js:372
+#, js-format
+msgid "Uploading “%s” to Drive"
+msgstr "Wysyłam „%s” na Dysk"
+
+#: assets/js/drive-video.js:374
+#, js-format
+msgid "Downloading “%s” from Drive to pick a frame"
+msgstr "Pobieram „%s” z Dysku do wyboru klatki"
+
+#: assets/js/drive-video.js:376
+#, js-format
+msgid "“%s”: setting “Anyone with the link” and inserting the player…"
+msgstr "„%s”: ustawiam dostęp „Każdy, kto ma link” i wstawiam odtwarzacz…"
+
+#: assets/js/drive-video.js:378
+msgid "Loading videos from Drive…"
+msgstr "Wczytuję filmy z Dysku…"
+
+#: assets/js/drive-video.js:405
+msgid "with cover"
+msgstr "z okładką"
+
+#: assets/js/drive-video.js:405
+msgid "no cover"
+msgstr "bez okładki"
+
+#: assets/js/drive-video.js:424
+msgid "Insert"
+msgstr "Wstaw"
+
+#: assets/js/drive-video.js:424
+msgid "Pick a frame"
+msgstr "Wybierz klatkę"
+
+#: assets/js/drive-video.js:436
+msgid "Other frame"
+msgstr "Inna klatka"
+
+#: assets/js/drive-video.js:443
+msgid "The Drive folder has no videos uploaded from this site yet."
+msgstr "W folderze na Dysku nie ma jeszcze filmów wysłanych z tej strony."
+
+#: assets/js/drive-video.js:469
+msgid "Upload a new video"
+msgstr "Wyślij nowy film"
+
+#: assets/js/drive-video.js:472
+msgid "Pick a video from Drive"
+msgstr "Wybierz film z Dysku"
+
+#: assets/js/drive-video.js:477
+#, js-format
+msgid "Videos live in the folder “%s” in your Google Drive (you may move or rename it). Access: anyone with the link."
+msgstr "Filmy są w folderze „%s” na Twoim Dysku Google (możesz go przenieść i przemianować). Dostęp: każdy, kto ma link."
+
+#: assets/js/drive-video.js:482
+#: assets/js/drive-video.js:487
+msgid "Drive video"
+msgstr "Film z Dysku"
+
+#: assets/js/drive-video.js:488
+msgid "Uploads a video to Google Drive or picks one uploaded before, and inserts a player with a cover."
+msgstr "Wysyła film na Dysk Google albo wybiera wysłany wcześniej i wstawia odtwarzacz z okładką."
+
+#: assets/js/drive-video.js:491
+msgid "video"
+msgstr "wideo"
+
+#: assets/js/drive-video.js:491
+msgid "film"
+msgstr "film"
+
+#: assets/js/google-photos.js:81
+msgid "The time for picking photos ran out. Start again."
+msgstr "Minął czas na wybór zdjęć. Zacznij jeszcze raz."
+
+#: assets/js/google-photos.js:133
+msgid "Only videos were picked — use the Drive video block for videos."
+msgstr "Wybrano tylko filmy — filmy wstawiaj blokiem „Film z Dysku”."
+
+#: assets/js/google-photos.js:134
+msgid "No photo was picked."
+msgstr "Nie wybrano żadnego zdjęcia."
+
+#: assets/js/google-photos.js:139
+#, js-format
+msgid "Google Photos: imported %d."
+msgstr "Zdjęcia Google: zaimportowano %d."
+
+#: assets/js/google-photos.js:141
+#, js-format
+msgid "Videos skipped: %d."
+msgstr "Pominięte filmy: %d."
+
+#: assets/js/google-photos.js:144
+#, js-format
+msgid "Errors: %s"
+msgstr "Błędy: %s"
+
+#: assets/js/google-photos.js:159
+msgid "Importing from Google Photos is for administrators only."
+msgstr "Import ze Zdjęć Google jest tylko dla administratora."
+
+#: assets/js/google-photos.js:164
+msgid "The Google connection has no Google Photos access yet."
+msgstr "Połączenie z Google nie ma jeszcze dostępu do Zdjęć Google."
+
+#: assets/js/google-photos.js:165
+msgid "Settings → Google Media → “Reconnect”"
+msgstr "Ustawienia → Media Google → „Połącz ponownie”"
+
+#: assets/js/google-photos.js:168
+msgid "Opening Google’s picker…"
+msgstr "Otwieram okno wyboru Google…"
+
+#: assets/js/google-photos.js:173
+msgid "Pick photos in the Google tab and click “Done”. This tab is waiting."
+msgstr "Wybierz zdjęcia w karcie Google i kliknij „Gotowe”. Ta karta czeka."
+
+#: assets/js/google-photos.js:175
+msgid "The browser blocked the new tab."
+msgstr "Przeglądarka zablokowała nową kartę."
+
+#: assets/js/google-photos.js:175
+msgid "Open the photo picker"
+msgstr "Otwórz wybór zdjęć"
+
+#: assets/js/google-photos.js:176
+msgid "Tab closed?"
+msgstr "Karta się zamknęła?"
+
+#: assets/js/google-photos.js:176
+msgid "Open the picker again"
+msgstr "Otwórz wybór jeszcze raz"
+
+#: assets/js/google-photos.js:189
+#, js-format
+msgid "Importing into the media library: %1$d of %2$d (“%3$s”)."
+msgstr "Importuję do biblioteki mediów: %1$d z %2$d („%3$s”)."
+
+#: assets/js/google-photos.js:195
+msgid "Try again"
+msgstr "Spróbuj jeszcze raz"
+
+#: assets/js/google-photos.js:195
+msgid "Pick in Google Photos"
+msgstr "Wybierz w Zdjęciach Google"
+
+#: assets/js/google-photos.js:199
+msgid "Photos are copied into the media library (max 2560 px, no GPS location) and inserted here as a gallery. Videos are skipped."
+msgstr "Zdjęcia trafią do biblioteki mediów jako kopie (najwyżej 2560 px, bez lokalizacji GPS) i wstawią się tu jako galeria. Filmy są pomijane."
+
+#: assets/js/google-photos.js:204
+#: assets/js/google-photos.js:209
+msgid "Google Photos"
+msgstr "Zdjęcia Google"
+
+#: assets/js/google-photos.js:210
+msgid "Imports photos picked in Google Photos into the media library and inserts a gallery."
+msgstr "Importuje zdjęcia wybrane w Zdjęciach Google do biblioteki mediów i wstawia galerię."
+
+#: assets/js/google-photos.js:213
+msgid "gallery"
+msgstr "galeria"
+
+#: assets/js/google-photos.js:213
+msgid "album"
+msgstr "album"
+
